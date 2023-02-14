@@ -3,8 +3,18 @@
 78 -> третьей цифры нет
 3267900 -> 6
 ДОП: цифра третья может быть как с левой стороны, так и с правой
-Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 */
 
 Console.WriteLine("Введите число: ");
-int number = 
+int number = Convert.ToInt32(Console.ReadLine());
+var array = number.ToString().Select(t=>int.Parse(t.ToString())).ToArray();
+
+if (array.Length > 3)
+{
+    Console.WriteLine($"Третьим числом является {array[2]}");
+    Console.WriteLine($"Третьим числом с конца является {array[array.Length - 3]}");
+}
+else
+{
+    Console.WriteLine($"Число {number} не является трёхкратным");
+}
