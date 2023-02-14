@@ -19,4 +19,3 @@ else
 {
     Console.WriteLine($"Число {number} не является трёхзначным");
 }
-
