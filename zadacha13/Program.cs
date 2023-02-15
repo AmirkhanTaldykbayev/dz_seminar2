@@ -7,10 +7,15 @@
 
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
+if(number < 0)
+{
+    number = number * (-1);
+}
+
 var array = number.ToString().Select(t=>int.Parse(t.ToString())).ToArray();
 
-if (array.Length > 3)
-{
+if (array.Length > 2)
+{   
     Console.WriteLine($"Третьим числом является {array[2]}");
     Console.WriteLine($"Третьим числом с конца является {array[array.Length - 3]}");
 }
