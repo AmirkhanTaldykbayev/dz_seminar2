@@ -12,7 +12,7 @@ int index = 0;
 int [] weekday = {1, 2, 3, 4, 5};
 int [] weekend = {6, 7};
 
-if (day < 8)
+if (day >= 1 && day <= 7)
 {
     while(index < weekday.Length)
     {
